@@ -140,7 +140,7 @@
     .nav ul{
         flex-direction: column;
         align-items: center;
-        justify-content:start;
+        justify-content:start !important;
         padding-right: 1px;
     }
     .nav ul li{
