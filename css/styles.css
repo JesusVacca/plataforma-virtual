@@ -1,0 +1,163 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Playfair Display", serif;
+    font-optical-sizing: auto;
+    font-style: normal;;
+}
+:root{
+    --header:#454141;
+    --text:#fff;
+}
+.contenedor{
+    max-width: 1920px;
+    height: 100%;
+    position: relative;
+}
+.header{
+    width: 100%;
+    height: 70px;
+    overflow: hidden;
+    display: flex;
+    background: var(--header);
+    color: var(--text);
+}
+.header .logo{
+    width: 20%;
+    height: 100%;
+    overflow: hidden;
+    font-size: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+}
+.header .hamburguesa{
+    width: 40px;
+    height: 40px;
+    position: absolute;
+    top: 1em;
+    right: 1em;
+    border: none;
+    cursor: pointer;
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.hamburguesa span{
+    width: 90%;
+    height: 4px;
+    background-color: var(--header);
+    margin: 2px;
+}
+.header .nav{
+    width: 80%;
+    height: 100%;
+    transition: all .4s ease-in-out;
+}
+.nav > ul{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    padding-right: 1em;
+}
+
+.nav li{
+    min-width: 150px;
+    height: 50%;
+    list-style: none;
+    /* margin-left: 1em; */
+}
+.nav li a{
+    text-decoration: none;
+    font-size: 18px;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--text);
+    opacity: .5;
+    transition: all .2s ease-in-out;
+}
+.nav li:nth-child(1) a{color: var(--text); font-weight: bold; opacity: 1 !important;}
+.nav li a:hover{opacity: 1;}
+
+.nav .buscar {
+    overflow: hidden;
+    display: flex;
+}
+.buscar input[type=text]{
+    width: 70%;
+    height: 100%;
+    border: none;
+    font-size: 16px;
+    padding-left: 1em;
+    outline: none;
+}
+.buscar a{
+    width: 30% !important;
+    height: 100%;
+    border: none;
+    color: #fff;
+    background-color: blue;
+    font-size: 14px !important;
+    margin-left: .5em;
+    border-radius: 4px;
+    opacity: 1 !important;
+    font-weight: bold;
+}
+.buscar a:active{opacity: .7 !important;}
+
+/* Estilos del banner */
+
+.banner{
+    width: 100%;
+    height: 300px;
+    border: 2px solid black;
+}
+
+@media (max-width:1300px) {
+    .header{
+        overflow:initial !important;
+        position: relative;
+    }
+    .hamburguesa{display: flex !important;}
+    .nav{
+        position: absolute;
+        width: 90% !important;
+        height: 100vh !important;
+        top: 70px;
+        overflow: hidden;
+        background: var(--header);
+        transform: translateX(-100%);
+    }
+
+    .nav ul{
+        flex-direction: column;
+        align-items: center;
+        padding-right: 1px;
+    }
+    .nav ul li{
+        width: 100% !important;
+        height: calc(50%/7);
+        margin-bottom: 3px;
+        margin-top: 1em;
+        margin-left: 0 !important;
+        margin-right: 0 !important;
+    }
+    .nav ul li:hover{background-color: var(--text);}
+    .nav ul li:hover a{color: var(--header);}
+    .nav .buscar{
+        width: 90% !important;
+    }
+    .nav .buscar:hover{background: transparent !important;}
+    .nav .buscar:hover a{color: var(--text);}
+    .active-nav{
+        transform: translateX(0%) !important;
+    }
+}
