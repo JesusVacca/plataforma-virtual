@@ -140,7 +140,7 @@ html{
     flex-direction: column;
     border: 1px solid;
 
-<<<<<<< HEAD
+
 }
 
 .banner-content .buscar, .text-content{
@@ -350,30 +350,3 @@ html{
 .mostrar-carrito{
     transform: translateY(0%);
 }
-=======
-    .nav ul{
-        flex-direction: column;
-        align-items: center;
-        justify-content:start !important;
-        padding-right: 1px;
-    }
-    .nav ul li{
-        width: 100% !important;
-        height: calc(50%/7);
-        margin-bottom: 3px;
-        margin-top: 1em;
-        margin-left: 0 !important;
-        margin-right: 0 !important;
-    }
-    .nav ul li:hover{background-color: var(--text);}
-    .nav ul li:hover a{color: var(--header);}
-    .nav .buscar{
-        width: 90% !important;
-    }
-    .nav .buscar:hover{background: transparent !important;}
-    .nav .buscar:hover a{color: var(--text);}
-    .active-nav{
-        transform: translateX(0%) !important;
-    }
-}
->>>>>>> b643b4ec520dae28db33ca37f9e1a3cd4990f066
