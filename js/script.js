@@ -1,5 +1,7 @@
 const hamburguesa = document.getElementById("hamburguesa");
-const nav = document.getElementById("nav");
-hamburguesa.onclick = () =>{
-    nav.classList.toggle("active-nav");
+const cart = document.getElementById("cart");
+
+
+cart.onclick = () =>{
+    document.getElementById("carrito").classList.toggle("mostrar-carrito");
 }

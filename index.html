@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -14,24 +14,127 @@
 </head>
 <body>
     <div class="contenedor">
+        <div class="carrito" id="carrito">
+            <div class="carrito-tabla">
+                <div class="table">
+                    <div class="theader">
+                        <div class="row">
+                            <div class="colunm">Imagen</div>
+                            <div class="colunm">Nombre</div>
+                            <div class="colunm">Precio</div>
+                        </div>
+                    </div>
+                    <div class="tbody">
+                        <div class="row">
+                            <div class="colunm">
+                                <img src="" alt="algo">
+                            </div>
+                            <div class="colunm">Netflix</div>
+                            <div class="colunm">20.000</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="carrito-botones">
+                <div class="descripcion">
+                    <div class="total">
+                        Total
+                    </div>
+                    <div class="precio">
+                        $ <span id="precio">20.000</span>
+                    </div>
+                </div>
+                <button type="button" class="comprar">Comprar</button>
+            </div>
+        </div>
         <header class="header">
             <div class="logo">Logo</div>
             <nav class="nav" id="nav">
                 <ul>
-                    <li><a href="#">Inicio</a></li>
-                    <li><a href="#">Productos</a></li>
-                    <li><a href="#">Contacto</a></li>
-                    <li><a href="#">Sobre nosotros</a></li>
-                    <li><a href="#">Login</a></li>
-                    <li class="buscar">
+                    <li>
+                        <img src="img/svg/bx-home.svg" alt="">
+                        <a href="#">
+                            Inicio
+                        </a>
+                    </li>
+                    <li>
+                        <img src="img/svg/bag.svg" alt="product">
+                        <a href="#productos">Productos</a></li>
+                    <li>
+                        <img src="img/svg/bxs-phone-call.svg" alt="">
+                        <a href="#">Contacto</a></li>
+                    <li>
+                        <img src="img/svg/bag.svg" alt="about">
+                        <a href="#">Sobre nosotros</a></li>
+                    <li>
+                        <img src="img/svg/bxs-user.svg" alt="">
+                        <a href="#">Login</a>
+                    </li>
+                    <li class="cart" title="Carrito" id="cart">
+                        <img src="img/svg/cart.svg" alt="">
+                    </li>
+                    <!-- <li class="buscar">
                         <input type="text" name="" id="" placeholder="Buscar">
                         <a href="#">Buscar</a>
-                    </li>
+                    </li> -->
                 </ul>
             </nav>
             <button class="hamburguesa" id="hamburguesa"><span></span><span></span><span></span></button>
         </header>
-        <div class="banner"></div>
+        <div class="banner">
+            <div class="banner-content">
+                <div class="text-content">
+                    <h1 class="titulo">
+                        Algo que va aca
+                    </h1>
+                    Lorem ipsum dolor sit, amet consectetur adipisicing elit. At maiores debitis hic aspernatur, voluptates architecto non quos! Voluptatibus laudantium quis culpa laboriosam sequi, rem minus eum, obcaecati cum, necessitatibus animi!
+                </div>
+                <div class="buscar">
+                    <input type="text" name="" id="" placeholder="Buscar">
+                    <input type="submit" value="Buscar">
+                </div>
+            </div>
+            <div class="img-content"></div>
+        </div>
+        <div class="productos" id="productos">
+            <div class="cars">
+                <h1 class="titulo">Netflix</h1>
+                <img src="img/productos/netflix.png" alt="im" class="imagen">
+                <p class="precio">
+                    <span>Valor pantalla:</span>
+                    <span>4000</span>
+                </p>
+                <button type="button" class="add-cart">Agregar al carro</button>
+            </div>
+            <div class="cars">
+                <h1 class="titulo">Netflix</h1>
+                <img src="img/productos/netflix.png" alt="im" class="imagen">
+                <p class="precio">
+                    <span>Valor pantalla:</span>
+                    <span>4000</span>
+                </p>
+                <button type="button" class="add-cart">Agregar al carro</button>
+            </div>
+            <div class="cars">
+                <h1 class="titulo">Netflix</h1>
+                <img src="img/productos/netflix.png" alt="im" class="imagen">
+                <p class="precio">
+                    <span>Valor pantalla:</span>
+                    <span>4000</span>
+                </p>
+                <button type="button" class="add-cart">Agregar al carro</button>
+            </div>
+            <div class="cars">
+                <h1 class="titulo">Netflix</h1>
+                <img src="img/productos/netflix.png" alt="im" class="imagen">
+                <p class="precio">
+                    <span>Valor pantalla:</span>
+                    <span>4000</span>
+                </p>
+                <button type="button" class="add-cart">Agregar al carro</button>
+            </div>
+            
+        </div>
     </div>
     <script src="js/script.js"></script>
 </body>
