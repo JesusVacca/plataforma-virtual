@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/login.css">
+    <title>Login</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap" rel="stylesheet">
+
+</head>
+<body>
+    <div class="contenedor">
+        <form class="form" id="login-user">
+            <h1 class="titulo">login</h1>
+            <input type="number" name="username" id="username" placeholder="Nombre de usuario" required>
+            <input type="password" name="password" id="password" placeholder="Contraseña" required>
+            <input type="submit" value="Iniciar sesión" onclick="datosFormulario()">
+            <div class="opciones">
+                <a href="#" class="paginacion">
+                    <img src="../img/svg/bxs-key.svg" alt="...">
+                    ¿Olvidaste la contraseña?
+                </a>
+                <a href="#" class="paginacion">
+                    <img src="../img/svg/exclamation-diamond-fill.svg" alt="...">
+                    ¿No tienes una cuenta?
+                </a>
+            </div>
+
+        </form>
+    </div>
+    <script src="../js/loging.js"></script>
+</body>
+</html>

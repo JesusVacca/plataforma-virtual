@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/admin.css">
+    <title>Admin</title>
+</head>
+<body>
+    <div class="container">
+        <header class="header">
+            <div class="logo">
+                logo
+            </div>
+            <nav class="nav">
+                <ul>
+                    <li><a href="#administradores">Administradores</a></li>
+                    <li><a href="#usuarios">Usuarios</a></li>
+                    <li><a href="#servicios">Servicios</a></li>
+                    <li class="perfil" id="perfil">
+                        <a href="#perfil-admin">Perfil</a>
+                    </li>
+                </ul>
+            </nav>
+        </header>
+
+        <div class="administradores" id="administradores"></div>
+        <div class="usuarios" id="usuarios">
+
+            <h1 class="titulos">Listado de usuarios</h1>
+            <div class="menu-navegacion">
+                <input type="text" name="" id="" placeholder="Nombre de usuario a buscar">
+                <button type="button">
+                    Buscar
+                </button>
+            </div>
+            <div class="contenedor-table">
+                <div class="table">
+                    <div class="thead">
+                        <div class="row">
+                            <div class="cell">Nombres</div>
+                            <div class="cell">Apellidos</div>
+                            <div class="cell">Cedula</div>
+                            <div class="cell">Correo</div>
+                            <div class="cell">Telefono</div>
+                            <div class="cell">Editar</div>
+                            <div class="cell">Eliminar</div>
+                        </div>
+                    </div>
+                    <div class="tbody">
+                        <div class="row">
+                            <div class="cell">Jesus Rodolfo</div>
+                            <div class="cell">Vacca Romero</div>
+                            <div class="cell">1007899440</div>
+                            <div class="cell"><a href="">jesus.vacca99@gmail.com</a></div>
+                            <div class="cell">3117984622</div>
+                            <div class="cell"><a class="edit">Editar</a></div>
+                            <div class="cell"><a class="delete">Eliminar</a></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+        <div class="servicios" id="servicios"></div>
+        
+
+    </div>
+    <script src="../js/admin.js"></script>
+</body>
+</html>
