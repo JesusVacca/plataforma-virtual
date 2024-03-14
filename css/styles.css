@@ -2,351 +2,352 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: "Playfair Display", serif;
-    font-optical-sizing: auto;
-    font-style: normal;;
+    font-family: "Madimi One", sans-serif;
+    font-weight: 400;
+    font-style: normal;
 }
+
+
+
+/* 
+
+Desktop (Escritorio):
+
+Resoluciones comunes: 1024 píxeles de ancho en adelante.
+Tamaños más grandes y resoluciones más altas: 1920x1080 píxeles o incluso 2560x1440 píxeles.
+Tabletas:
+
+Modo retrato: 768x1024 píxeles.
+Modo paisaje: 1024x768 píxeles.
+Variabilidad en tamaños: Adaptar el diseño para una amplia gama de resoluciones.
+Teléfonos móviles:
+
+Dispositivos más antiguos: Alrededor de 320x480 píxeles.
+Dispositivos más recientes: Resoluciones de 1080x1920 píxeles o superiores.
+Importancia de la adaptabilidad: Diseños web deben ser adaptables a dispositivos móviles 
+
+*/
+
 :root{
-    --header:#454141;
+    --color1:#fe5217 ;
+    --color2 : #fe6c2f ;
+    --color3 : #ff8647 ;
+    --color4 :#ff9f5f ;
+    --color5:#ffb977;
+
+    --texto1:#000000;
+    --texto2:#1e1e1e;
+    --texto3:#3c3c3c;
+    --texto4:#595959;
+    --texto5:#777777;
     --text:#fff;
+
 }
-html{
-    scroll-behavior: smooth;
-}
-.contenedor{
+.main{
     max-width: 1920px;
+    width: 100%;
     height: 100%;
-    position: relative;
     display: flex;
     flex-direction: column;
-    align-items: center;
     justify-content: center;
+    align-items: center;
+    /* overflow: auto; */
 }
-.header{
-    width: 98%;
-    height: 70px;
+.main .cart{
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    position: fixed;
+    background-color: var(--color2);
     overflow: hidden;
     display: flex;
-    background: var(--header);
-    color: var(--text);
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    transition: all .3s ease-in-out;
+    bottom: 8%;
+    right: 3%;
     z-index: 1;
 }
-.logo{
-    width: 10%;
-    height: 100%;
-    overflow: hidden;
-    font-size: 30px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-weight: bold;
-    background-color: var(--header);
+.main .cart:hover{
+    box-shadow: 2px 2px 20px var(--color1);
 }
-.header .hamburguesa{
-    width: 40px;
-    height: 40px;
-    position: absolute;
-    top: 1em;
-    right: 1em;
-    border: none;
-    cursor: pointer;
-    display: none;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-}
-.hamburguesa span{
-    width: 90%;
-    height: 4px;
-    background-color: var(--header);
-    margin: 2px;
-}
-.header .nav{
-    width: 90%;
-    height: 100%;
-    transition: all .4s ease-in-out;
-    display: flex;
-    justify-content: center;
-}
-.nav > ul{
-    width: 100%;
-    height: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: end;
-    padding-right: 1em;
-    position: relative;
-}
-
-.nav li{
-    min-width: 180px;
-    height: 50%;
-    list-style: none;
-    margin-left: 1em;
-    display: flex;
-    opacity: .5;
-
-}
-.nav li a{
-    text-decoration: none;
-    font-size: 18px;
-    width: 100%;
-    height: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: left;
-    color: var(--text);
-    opacity: .5;
-    transition: all .2s ease-in-out;
-    padding-left: 1em;
-
-}
-.nav img{
-    width: 30px;
-    height: auto;
-}
-.nav li:nth-child(1) a{color: var(--text); font-weight: bold; opacity: 1 !important;}
-.nav li:nth-child(1) {opacity: 1 !important;}
-.nav li:hover, .nav li:hover a{opacity: 1;}
-
-.nav .cart{
-    min-width: 50px;
-    display: flex;
-    justify-content: center;
-    opacity: 1;
-}
-.nav .cart img{
-    width: 100%;
-    height: 100%;
-    cursor: pointer;
+.main .cart img{
+    width: 60%;
+    height: 60%;
+    object-fit: contain;
 }
 
 /* Estilos del banner */
-
-.banner{
-    width: 98%;
+.main .banner{
+    width: 100%;
     height: 550px;
-    /* border: 2px solid black; */
+    background: var(--color5);
+    background-image: url(../img/banner.jpg);
     overflow: hidden;
-    display: flex;
-    z-index: -1;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
 }
 
-.banner .banner-content, .img-content{
-    width: 50%;
-    height: 100%;
-    overflow: hidden;
-    display: flex;
-    flex-direction: column;
-    border: 1px solid;
-
-
-}
-
-.banner-content .buscar, .text-content{
+.header{
     width: 100%;
-    height: 50%;
-    /* border: 2px solid; */
+    height: 100px;
+    background: var(--color1);
+    overflow: hidden;
+    display: flex;
+    /* position: sticky;
+    top: 0; */
+}
+.header .logo{
+    width: 100%;
+    height: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
-    text-align: justify;
-    padding: 1em;
-
+    overflow: hidden;
 }
-.text-content{flex-direction: column;}
-
-.buscar input[type=text]{
-    width: 50%;
-    height: 40px;
-    padding-left: 1em;
-    font-size: 18px;
-    outline: none;
-}
-.buscar input[type=submit]{
-    width: 100px;
-    height: 40px;
-    text-decoration: none;
+.logo h1{
+    width: 100%;
+    font-size: 35px;
     color: var(--text);
-    background-color: var(--header);
-    border: none;
-    margin-left: 1em;
-    font-size: 16px;
+    text-shadow: 2px 2px 20px var(--text);
+    text-align: center;
 }
-
-/* Estilos del carrito */
-.carrito{
-    width: 400px;
-    height: 400px;
-    background-color: var(--text);
+.header .nav{
+    width: 30%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
     position: absolute;
-    top: 71px;
-    right: 1%;
-    z-index: 0;
-    overflow: hidden;
-    transform: translateY(-100%);
-    color: var(--header);
-    transition: all .4s ease-in-out;
-    border: 2px solid;
+    background: var(--color2);
+    top: 100px;
+    left: 0;
+    transform: translateX(-200%);
+    transition: all .3s ease-in-out;
+    z-index: 1;
 }
-.carrito > .carrito-tabla{
-    width: 100%;
-    height: 70%;
+.active{
+    transform: translateX(0%) !important;
 }
-.carrito > .carrito-botones{
-    width: 100%;
-    height: 30%;
-    border-top: 2px solid;
+.nav ul{
     display: flex;
     flex-direction: column;
-    align-items: center;
-}
-.carrito-botones .descripcion{
     width: 100%;
-    height: 40%;
-    display: flex;
-    border-bottom: 1px solid var(--header);
+    height: 100%;
+    list-style: none;
+    padding-top: 4em;
+
 }
-.carrito .comprar{
-    width: 90%;
-    height: 40px;
-    margin-top: 1em;
-    border: none;
-    cursor: pointer;
+.nav li{
+    min-width: 100%;
+    height: 50px;
+    margin-bottom: 1em;
+    transition: all .2s ease-in-out;
+    border-color: var(--text);
+
+}
+.nav li:hover{
+    background: var(--color5);
+    /* border: 1px solid var(--text); */
+    /* border-radius: 1em; */
+}
+.nav a{
+    display: flex;
+    width: auto;
+    height: 100%;
+    align-items: center;
+    justify-content:start;
+    text-decoration: none;
+    font-size: 25px;
     color: var(--text);
-    background-color: var(--header);
-    font-size: 18px;
-    font-weight: bold;
-}
-.comprar:hover{
-   opacity: .8;
-}
-.descripcion .total{
-    width: 60%;
-    height: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-size: 20px;
-
-}
-.descripcion .precio{
-    width: 40%;
-    height: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-size: 20px;
-}
-
-.carrito-tabla .table{
-    width: 100%;
-    height: 100%;
-    color: var(--header);
-}
-
-.table .theader{
-    width: 100%;
-    height: 15%;
     overflow: hidden;
-    display: flex;
-    font-weight: bold;
-    background: var(--header);
-    color: var(--text);
+
 }
-.table .tbody{
-    width: 100%;
+.nav img{
+    width: 30%;
     height: 85%;
+    margin-right: 1em;
+}
+.nav ul:hover >:not(:hover){
+    filter: blur(1px);
+}
+.header .hamburguesa{
+    position: absolute;
+    width: 40px;
+    height: 40px;
+    top: 2em;
+    right: 2em;
+}
+.hamburguesa button{
+    width: 100%;
+    height: 100%;
+    border: none;
     display: flex;
     flex-direction: column;
+    align-items: end;
+    justify-content: center;
+    background: transparent;
+    cursor: pointer;
+}
+
+.hamburguesa span{
+    width: 90%;
+    height: 5px;
+    background-color: #000000;
+    margin: 2px;
+    background: var(--text);
+}
+.hamburguesa span:nth-child(1), .hamburguesa span:nth-child(3){width: 60% !important;}
+
+
+
+
+.main .footer{
+    width: 100%;
+    height: 400px;
+    background-color: var(--color1);
+    overflow: hidden;
+    display: flex;
+}
+.main .footer > div{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.main .section{
+    width: 100%;
+    /* height: 700px; */
     overflow: auto;
 }
-.table .theader .row{
-    width: 100%;
-    height: 100%;
-    display: flex;
-}
-.table .tbody .row{
-    width: 100%;
-    height: 40px;
-    display: flex;
-    border-bottom: 1px solid var(--header);
-}
-
-.table .theader .colunm{
-
-    border-left: 1px solid #000;
-    width: calc(100%/3);
-    height: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-.table  .tbody .colunm{
-
-    border-left: 1px solid;
-    width: calc(100%/3);
-    height: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    color: red;
-}
-.row img{
-    width: 50%;
-    height: 100%;
-}
-
-/* Estilos de la seccion de productos */
-
-.productos{
-    width: 98%;
-    border: 1px solid;
+.main .productos{
     display: grid;
-    grid-template-columns: repeat(3, 400px);
-    gap: 10px;
-    overflow: hidden;
+    grid-template-columns: repeat(auto-fit,minmax(300px,1fr));
     padding: 1em;
+    gap: 8px;
+
+}
+.productos .item-producto{
+    /* width: 300px; */
+    height: 300px;
+    position: relative;
+    border: none;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius:1em;
+    border: 1px solid var(--color1);
+    transition: all .3s ease-out;
+
+}
+.productos .item-producto:hover{
+    box-shadow: 2px 2px 20px var(--color1);
+    border: none;
+}
+.item-producto img{
+    width: 90%;
+    height: 90%;
+    object-fit: cover;
 }
 
-.productos .cars{
-    height: 300px;
-    border: 1px solid;
+.item-producto .capa{
+    width: 100%;
+    height: 0%;
+    background: linear-gradient(to bottom, #0000004d,#0000003d,#000);
+    position: absolute;
+    bottom: 0;
+    transition: all .3s ease-out;
     display: flex;
     flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-weight: bolder;
 }
-.cars .titulo-pantalla{
+.item-producto:hover .capa{
+    height: 100% !important;
+}
+
+.capa .titulo{
+    width: 100%;
+    height: 15%;
     text-align: center;
-    color: var(--header);
-    font-size: 30px;
+    color: var(--text);
+   overflow: hidden;
+   text-shadow: 2px 2px 20px var(--texto1);
+
 }
-.cars .imagen-pantalla{
+.capa .descripcion{
     width: 100%;
-    height: 50%;
-}
-.cars .precio{
-    font-size: 18px;
-    padding-left: 1em;
-    padding-right: 1em;
-    margin-top: 1em;
+    height: 60%;
     display: flex;
+    align-items: end;
+    justify-content: center;
+    overflow: hidden;
+    padding-bottom: 1em;
 }
-.cars .precio span{
+.descripcion p{
     width: 100%;
-    padding-left: 1em;
-    border-bottom: 1px solid var(--header);
-}
-.cars .add-cart{
-    width: 60%;
-    height: 40px;
-    border: none;
-    margin: auto;
-    background-color: var(--header);
+    text-align: center;
     color: var(--text);
     font-size: 18px;
-    font-weight: bold;
-    cursor: pointer;
 }
-.mostrar-carrito{
-    transform: translateY(0%);
+.capa .button{
+    width: 80%;
+    height: 12%;
+    border: none;
+    font-size: 14px;
+    color: var(--text);
+    background: var(--color1);
+    cursor: pointer;
+    opacity: .8;
+    margin-top: 1%;
+    overflow: hidden;
+}
+.capa .button:hover{opacity: 1 !important;}
+
+.footer ul{
+    width: 60%;
+    list-style: circle;
+    color: var(--text);
+    font-size: 20px;
+}
+.footer li{
+    min-width: 100px;
+    margin: .5em;
+}
+.footer a{
+    font-size: 18px;
+    text-decoration: none;
+    color: var(--text);
+}
+.footer ul:hover :not(:hover){
+    opacity: .6;
+    transition: all .4s ease-in-out;
+
+}
+
+@media (max-width:1000px) {
+    .nav{
+        width: 100% !important;
+    }
+    .hamburguesa{
+        top: 4% !important;
+        right: 1% !important;
+    }
+}
+@media (max-width:780px) {
+    .logo h1{
+        font-size: 18px;
+    }
+    .productos .item-producto{width: 100% !important;}
+}
+@media (max-width:320px) {
+    .logo h1{
+        font-size: 16px;
+    }
 }

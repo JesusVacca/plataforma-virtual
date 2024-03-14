@@ -1,13 +1,8 @@
 const hamburguesa = document.getElementById("hamburguesa");
-const cart = document.getElementById("cart");
-const listaBotonesAdd = document.getElementsByClassName("add-cart");
-const tbody = document.getElementById("tbody");
+console.log(hamburguesa)
 
-
-
-cart.onclick = () =>{
-    document.getElementById("carrito").classList.toggle("mostrar-carrito");
+hamburguesa.onclick = () =>{
+    const nav = document.getElementById("nav");
+    nav.classList.toggle("active");
 }
 
-
- 
