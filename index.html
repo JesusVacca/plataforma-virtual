@@ -14,7 +14,10 @@
     </head>
 <body>
     <main class="main" id="main">
-        <header class="header">
+        <a href="#header" id="return">
+            <img src="img/svg/arrow-up-square-fill.svg" alt="">
+        </a>
+        <header class="header" id="header">
             <div class="logo">
                 <h1>Tienda de servicios de streaming</h1>
             </div>
@@ -45,7 +48,7 @@
                         </a>
                     </li>
                     <li>
-                        <a href="#">
+                        <a href="site/login.html">
                             <img src="img/svg/bxs-user.svg" alt="">
                             Login
                         </a>
@@ -58,10 +61,18 @@
             </button></div>
         </header>
         <div class="banner"></div>
-        <div class="cart">
+        <div class="cart" id="cart">
             <img src="img/svg/cart.svg" alt="">
         </div>
-        <section class="productos section">
+        <div class="cart-content" id="cartContent">
+            <h1>
+                Carrito de compras
+            </h1>
+            <button type="button" id="closeCart">
+                <img src="img/svg/x-lg.svg" alt="" srcset="">
+            </button>
+        </div>
+        <section class="productos section" id="productos">
 
             <div class="item-producto">
                 <img src="img/productos/netflix.png" alt="">
@@ -136,11 +147,11 @@
         <footer class="footer">
             <div class="enlaces">
                 <ul>
-                    <li><a href="#">Home</a></li>
-                    <li><a href="#">Productos</a></li>
+                    <li><a href="#header">Home</a></li>
+                    <li><a href="#productos">Productos</a></li>
                     <li><a href="#">Sobre nosotros</a></li>
                     <li><a href="#">Contacto</a></li>
-                    <li><a href="#">Login</a></li>
+                    <li><a href="site/login.html">Login</a></li>
                 </ul>
             </div>
             <div class="red-social"></div>
