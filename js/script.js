@@ -17,6 +17,8 @@ window.addEventListener("scroll",function(){
     var porcentajeScroll = (window.scrollY / (alturaPagina - alturaVentana)) * 100;
     if(porcentajeScroll >= 20){
         boton.style.display="block";
+        const nav = document.getElementById("nav");
+        if(nav.classList.contains("active"))nav.classList.remove("active");
     }else boton.style.display="none";
 
 })

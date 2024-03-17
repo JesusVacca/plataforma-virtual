@@ -185,12 +185,52 @@ html{
 .main .banner{
     width: 100%;
     height: 550px;
-    background: var(--color5);
-    background-image: url(../img/banner.jpg);
+    background: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     overflow: hidden;
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: cover;
+}
+.banner .banner-image{
+    width: calc(100%/7);
+    height: 90%;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    border: 1px solid #fff;
+    transition: all .6s ease-out;
+    cursor: pointer;
+    border-radius: 1em;
+}
+.banner .banner-image:nth-child(even){
+    transform: translateY(4%);
+    
+}
+.banner .banner-image:hover:nth-child(even){
+    transform: translateY(0%) !important;
+    
+}
+
+.banner img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transform: scale(1.2);
+}
+.banner img:hover{
+    transform: scale(1) !important;
+    object-fit: fill !important;
+}
+.banner:hover > :not(:hover){
+    opacity: .7;
+    transform: scale(.8);
+}
+.banner-image:hover{
+    width: 50% !important;
+    z-index: 1;
+    transform: translateY(0%);
 }
 
 .header{
@@ -281,8 +321,8 @@ html{
     position: absolute;
     width: 40px;
     height: 40px;
-    top: 2em;
-    right: 2em;
+    top: calc(55px/2);
+    left: 1em;
 }
 .hamburguesa button{
     width: 100%;
@@ -434,6 +474,7 @@ html{
 .footer ul:hover :not(:hover){
     opacity: .6;
     transition: all .4s ease-in-out;
+    transform: scale(.98);
 
 }
 
@@ -453,9 +494,7 @@ html{
     grid-template-columns: repeat(auto-fit,minmax(150px,1fr));
 
 }
-.footer .red-social li:nth-child(1) a img{
-    background: fill(blue);
-}
+
 @media (max-width:1000px) {
     .nav{
         width: 100% !important;
@@ -467,8 +506,15 @@ html{
 }
 @media (max-width:780px) {
     .logo h1{
-        font-size: 18px;
+        font-size: 16px;
     }
+    .banner{
+        background-image: url(../img/bunny-3429_256.gif) !important;
+        background-position: center !important;
+        background-repeat: no-repeat !important;
+        background-size: contain !important;
+    }
+    .banner .banner-image{display: none !important;}
     .productos .item-producto{width: 100% !important;}
     .cart-content{
         width: 100% !important;
