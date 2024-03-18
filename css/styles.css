@@ -9,7 +9,7 @@
 
 
 
-/* 
+/*
 
 Desktop (Escritorio):
 
@@ -24,7 +24,7 @@ Teléfonos móviles:
 
 Dispositivos más antiguos: Alrededor de 320x480 píxeles.
 Dispositivos más recientes: Resoluciones de 1080x1920 píxeles o superiores.
-Importancia de la adaptabilidad: Diseños web deben ser adaptables a dispositivos móviles 
+Importancia de la adaptabilidad: Diseños web deben ser adaptables a dispositivos móviles
 
 */
 
@@ -80,7 +80,7 @@ html{
     align-items: center;
     z-index: 1;
     transition: all .3s ease-out;
-    
+
 }
 .main #return:hover{transform: scale(1.2);}
 #return img{
@@ -159,11 +159,11 @@ html{
     height: 100%;
     background-image: linear-gradient(180deg,red,purple,red,purple);
     animation: rotate 5s infinite linear;
-    box-shadow: 2px 2px 20px 
+    box-shadow: 2px 2px 20px
     red,
-    2px 2px 20px 
+    2px 2px 20px
     purple,
-    2px 2px 20px 
+    2px 2px 20px
     red;
 }
 .cart-content::after{
@@ -187,10 +187,67 @@ html{
     height: 550px;
     background: black;
     display: flex;
+    position: relative;
+    /* overflow: hidden; */
     justify-content: center;
     align-items: center;
+}
+.banner-movil{
+    width: 100%;
+    height: 550px;
+    position: relative;
+    display: none;
     overflow: hidden;
 }
+
+.banner-movil .banner-content{
+    width: 700%;
+    height: 100%;
+    display: flex;
+    transform: translateX(0%);
+    transition: all .3s ease-out;
+
+}
+.banner-content img{
+    width: calc(100%/7);
+    height: 100%;
+    object-fit: fill;
+
+}
+
+
+.banner-buttom{
+    position: absolute;
+    width: 100%;
+    height: 40px;
+    top: 50%;
+    left: 0;
+    overflow: hidden;
+    display: flex;
+    padding-left: 2%;
+    padding-right: 2%;
+    align-items: center;
+    justify-content: space-between;
+    color: #fff;
+    z-index: 2;
+    /* border: 1px solid red; */
+}
+.banner-buttom a{
+    color: #fff;
+    text-decoration: none;
+    overflow: hidden;
+    cursor: pointer;
+    border: 1px solid #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.banner-buttom img{
+    width: 30px;
+    height: auto;
+}
+
+
 .banner .banner-image{
     width: calc(100%/7);
     height: 90%;
@@ -206,11 +263,11 @@ html{
 }
 .banner .banner-image:nth-child(even){
     transform: translateY(4%);
-    
+
 }
 .banner .banner-image:hover:nth-child(even){
     transform: translateY(0%) !important;
-    
+
 }
 
 .banner img{
@@ -229,9 +286,12 @@ html{
 }
 .banner-image:hover{
     width: 50% !important;
+    height: 100%;
     z-index: 1;
     transform: translateY(0%);
+    border-radius: 0em !important;
 }
+
 
 .header{
     width: 100%;
@@ -270,7 +330,7 @@ html{
     left: 0;
     transform: translateX(-200%);
     transition: all .3s ease-in-out;
-    z-index: 1;
+    z-index: 3;
 }
 .active{
     transform: translateX(0%) !important;
@@ -319,7 +379,7 @@ html{
 }
 .header .hamburguesa{
     position: absolute;
-    width: 40px;
+    width: 50px;
     height: 40px;
     top: calc(55px/2);
     left: 1em;
@@ -509,10 +569,10 @@ html{
         font-size: 16px;
     }
     .banner{
-        background-image: url(../img/bunny-3429_256.gif) !important;
-        background-position: center !important;
-        background-repeat: no-repeat !important;
-        background-size: contain !important;
+        display: none !important;
+    }
+    .banner-movil{
+        display: block !important;
     }
     .banner .banner-image{display: none !important;}
     .productos .item-producto{width: 100% !important;}
@@ -535,7 +595,7 @@ html{
     .logo h1{
         font-size: 16px;
     }
-    
+
 }
 
 @keyframes rotate {
