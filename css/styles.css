@@ -205,7 +205,7 @@ html{
     height: 100%;
     display: flex;
     transform: translateX(0%);
-    transition: all .3s ease-out;
+    transition: all .1s ease-out;
 
 }
 .banner-content img{
@@ -257,7 +257,7 @@ html{
     align-items: center;
     gap: 10px;
     border: 1px solid #fff;
-    transition: all .6s ease-out;
+    transition: all .1s ease-out;
     cursor: pointer;
     border-radius: 1em;
 }
@@ -402,8 +402,18 @@ html{
     background-color: #000000;
     margin: 2px;
     background: var(--text);
+    transition: all .3s ease-out;
 }
-.hamburguesa span:nth-child(1), .hamburguesa span:nth-child(3){width: 60% !important;}
+
+.hamburguesa.active span:nth-child(1){
+    transform: rotate(-45deg) translate(-3px, 4px);
+}
+.hamburguesa.active span:nth-child(2){
+    display: none;
+}
+.hamburguesa.active span:nth-child(3){
+    transform: rotate(45deg) translate(-3px, -4px);
+}
 
 
 
@@ -521,10 +531,12 @@ html{
     list-style: circle;
     color: var(--text);
     font-size: 20px;
+    padding: 5%;
 }
 .footer li{
-    min-width: 100px;
+    min-width: 150px;
     margin: .5em;
+
 }
 .footer a{
     font-size: 18px;
@@ -543,15 +555,18 @@ html{
     align-items: center;
 }
 .footer .red-social img{
-    width: 30px;
-    height: 30px;
+    width: 50px;
+    height: 40px;
     margin-right: 1em;
+    border-radius: 50%;
+    object-fit: contain;
 }
 
 .footer .red-social ul{
     list-style: none !important;
     display: grid !important;
     grid-template-columns: repeat(auto-fit,minmax(150px,1fr));
+
 
 }
 
@@ -581,6 +596,8 @@ html{
         right: 0;
     }
     .footer{
+        width: 100%;
+        height: 500px !important;
         display: flex !important;
         flex-direction: column !important;
     }
@@ -589,6 +606,9 @@ html{
     }
     .footer ul{
         width: 100%;
+    }
+    .footer .enlaces li{
+        margin-left: 1.5em;
     }
 }
 @media (max-width:320px) {

@@ -54,5 +54,6 @@ const hamburguesa = document.getElementById("hamburguesa");
 hamburguesa.onclick = () =>{
     const nav = document.getElementById("nav");
     nav.classList.toggle("active");
+    hamburguesa.classList.toggle("active");
 }
 
