@@ -45,7 +45,11 @@ window.addEventListener("scroll",function(){
     if(porcentajeScroll >= 20){
         boton.style.display="block";
         const nav = document.getElementById("nav");
-        if(nav.classList.contains("active"))nav.classList.remove("active");
+        if(nav.classList.contains("active")&& hamburguesa.classList.contains("active")){
+            nav.classList.remove("active");
+            hamburguesa.classList.remove("active");
+        }
+
     }else boton.style.display="none";
 
 })

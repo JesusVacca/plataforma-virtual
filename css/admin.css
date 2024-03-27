@@ -1,0 +1,502 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Madimi One", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+
+
+/*
+
+Desktop (Escritorio):
+
+Resoluciones comunes: 1024 píxeles de ancho en adelante.
+Tamaños más grandes y resoluciones más altas: 1920x1080 píxeles o incluso 2560x1440 píxeles.
+Tabletas:
+
+Modo retrato: 768x1024 píxeles.
+Modo paisaje: 1024x768 píxeles.
+Variabilidad en tamaños: Adaptar el diseño para una amplia gama de resoluciones.
+Teléfonos móviles:
+
+Dispositivos más antiguos: Alrededor de 320x480 píxeles.
+Dispositivos más recientes: Resoluciones de 1080x1920 píxeles o superiores.
+Importancia de la adaptabilidad: Diseños web deben ser adaptables a dispositivos móviles
+
+*/
+
+:root{
+    --color1:#fe5217 ;
+    --color2 : #fe6c2f ;
+    --color3 : #ff8647 ;
+    --color4 :#ff9f5f ;
+    --color5:#ffb977;
+
+    --texto1:#000000;
+    --texto2:#1e1e1e;
+    --texto3:#3c3c3c;
+    --texto4:#595959;
+    --texto5:#777777;
+    --text:#fff;
+
+    --fuchsia-pink-50: #fdf5fe;
+    --fuchsia-pink-100: #faebfc;
+    --fuchsia-pink-200: #f6d6f8;
+    --fuchsia-pink-300: #f0b6f1;
+    --fuchsia-pink-400: #e88ae8;
+    --fuchsia-pink-500: #d85dd6;
+    --fuchsia-pink-600: #c44ac0;
+    --fuchsia-pink-700: #9b3095;
+    --fuchsia-pink-800: #7f2979;
+    --fuchsia-pink-900: #692663;
+    --fuchsia-pink-950: #440e3f;
+
+
+}
+html{
+    scroll-behavior: smooth;
+}
+.main{
+    max-width: 1920px;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    /* overflow: auto; */
+}
+
+
+.main #return{
+    width: 40px;
+    height: 50px;
+    position: fixed;
+    bottom: 3%;
+    cursor: pointer;
+    display: none;
+    justify-content: center;
+    align-items: center;
+    z-index: 1;
+    transition: all .3s ease-out;
+
+}
+.main #return:hover{transform: scale(1.2);}
+#return img{
+    width: 90%;
+    height: 90%;
+}
+
+.header{
+    width: 100%;
+    height: 70px;
+    background: var(--fuchsia-pink-900);
+}
+.header .hamburguesa{
+    width: 40px;
+    height: 40px;
+    position: absolute;
+    top: 2%;
+    left: 2%;
+}
+.hamburguesa button{
+    width: 100%;
+    height: 100%;
+    border: none;
+    display: flex;
+    flex-direction: column;
+    align-items: end;
+    justify-content: center;
+    background: transparent;
+    cursor: pointer;
+}
+.hamburguesa span{
+    width: 90%;
+    height: 5px;
+    margin: 2px;
+    background: var(--text);
+    transition: all .3s ease-out;
+}
+
+
+
+
+.nav{
+    width: 30%;
+    height: 100vh;
+    position: absolute;
+    background: var(--fuchsia-pink-800);
+    top: 70px;
+    transform: translateX(-100%);
+    transition: all .2s ease-out;
+    z-index: 1;
+}
+
+.nav hr{
+    border-color:var(--fuchsia-pink-300);
+}
+.nav ul{
+    width: 100%;
+    margin-top: 2em;
+}
+.nav li{
+    width: 100%;
+    height: 50px;
+    margin-top: 1em;
+}
+.nav li a{
+    color: var(--text);
+    display: flex;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    text-decoration: none;
+    overflow: hidden;
+
+}
+.nav a img{
+    width: 20%;
+    height: 80%;
+}
+.nav a span{
+    width: 80%;
+    height: 80%;
+    display: flex;
+    align-items: center;
+    font-size: 20px;
+    
+}
+
+
+
+.nav.active{
+    transform: translateX(0%) !important;
+}
+.hamburguesa.active span:nth-child(1){
+    transform: rotate(-45deg) translate(-3px, 4px);
+}
+.hamburguesa.active span:nth-child(2){
+    display: none;
+}
+.hamburguesa.active span:nth-child(3){
+    transform: rotate(45deg) translate(-3px, -4px);
+}
+.configuration{
+    position: relative;
+}
+.nav li:hover{
+    background: var(--fuchsia-pink-700);
+}
+
+
+
+/* Estilos de las secciones */
+
+.seccion{
+    width: 100%;
+    height: auto;
+    background: var(--fuchsia-pink-500);
+    border-bottom: 1px solid var(--fuchsia-pink-700);
+    overflow: hidden;
+}
+.seccion:nth-child(even){
+    background: var(--fuchsia-pink-400);
+}
+.formulrio{
+    width: 100%;
+    height: 100%;
+    display: grid;
+    /* flex-direction: column;
+    align-items: center;
+    justify-content: center; */
+    position: relative;
+    grid-template-columns: repeat(auto-fit,minmax(500px,1fr));
+    padding: 1em;
+}
+.formulrio .nav-botones{
+    width: 100%;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: end;
+    position: absolute;
+    top: 1%;
+    overflow: hidden;
+}
+.nav-botones form{
+    display: flex;
+    justify-content: end;
+    align-items: center;
+    width: 70%;
+    height: 100%;
+    background-color: transparent;
+    padding-right: 1%;
+}
+.busqueda input[type=text]{
+    width: 300px;
+    height: 90% !important;
+    text-align: center;
+    font-size: 18px;
+    border: none;
+    outline: none;
+    border-bottom: 1px solid var(--fuchsia-pink-950);
+    border-radius: 2px;
+}
+.busqueda input[type=submit]{
+    width: 130px;
+    height: 90%;
+    border: none;
+    color: var(--fuchsia-pink-100);
+    background: var(--fuchsia-pink-950);
+    cursor: pointer;
+    opacity: .8;
+    margin-left: 2px;
+}
+.formulrio .table{
+    /* width: calc(50% - 10px);
+    height: 80%; */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-top: 60px;
+    overflow: hidden;
+    position: relative;
+}
+.formulrio .form{
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(301px,1fr));
+    margin-top: 60px;
+    gap: 10px;
+    padding: 1em;
+}
+.formulrio .form input{
+    border: none;
+    height: 40px;
+    text-align: center;
+    outline: none;
+    font-size: 18px;
+    background: #fff;
+    border-bottom: 1px solid var(--fuchsia-pink-900);
+    border-radius: 3px;
+}
+.formulrio .form input::placeholder{color: var(--fuchsia-pink-950);}
+.formulrio .form label{
+    height: 40px;
+    background: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--fuchsia-pink-950);
+    padding-left: 2em;
+    font-size: 18px;
+    position: relative;
+}
+.form label select{
+    width: 20%;
+    height: 100%;
+    margin-left: 1em;
+    border-bottom: 2px solid var(--fuchsia-pink-950);
+    border: none;
+    outline: none;
+    cursor: pointer;
+    background: var(--fuchsia-pink-200);
+    padding-left: 1%;
+    position: absolute;
+    right: 0;
+}
+.form .pantallas-content{
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(150px,1fr));
+    gap: 5px;
+}
+.formulrio .form input[type=submit]{
+    border: none;
+    cursor: pointer;
+    background: var(--fuchsia-pink-950);
+    color: var(--fuchsia-pink-100);
+    opacity: .9;
+}
+.formulrio input[type=submit]:hover{opacity: 1;}
+.formulrio input[type=text]:focus{
+    border: 1px solid var(--fuchsia-pink-950);
+    box-shadow: 2px 2px 20px var(--fuchsia-pink-900);
+}
+.titulo{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--fuchsia-pink-50);
+    margin-top: 3%;
+    font-size: 45px;
+}
+.formulrio .table{
+    display: flex;
+    flex-direction: column;
+    justify-content:start;
+    overflow: auto;
+    scrollbar-width: thin;
+    scrollbar-color: var(--fuchsia-pink-950) var(--fuchsia-pink-50);
+}
+/* Estilos del formulario de estidar datos */
+.formulrio .formulario-editar{
+    top: 0;
+    left: 0;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background:var(--fuchsia-pink-400);
+    display: none;
+    place-items: center;
+    background: var(--fuchsia-pink-700);
+    }
+.formulario-editar .form{
+    width: 50%;
+    margin: 0;
+    padding: 0;
+    gap: 10px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(300px,1fr));
+}
+.formulario-editar input{
+    margin: 0 !important;
+    padding: 0 !important;
+}
+.formulario-editar button{
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    border: none;
+    background: var(--fuchsia-pink-100);
+    display: grid;
+    place-items: center;
+    box-shadow: 2px 2px 20px var(--fuchsia-pink-50);
+    position: absolute;
+    top: 1%;
+    right: 1%;
+    cursor: pointer;
+    transition: all .3s ease-out;
+}
+.formulario-editar img{
+    width: 70%;
+    height: 70%;
+}
+.formulario-editar button:hover{
+    box-shadow:
+        2px 2px 20px var(--fuchsia-pink-50),
+        2px 2px 20px var(--fuchsia-pink-50),
+        2px 2px 20px var(--fuchsia-pink-50)
+     ;
+
+}
+
+/* Fin de los estilos del formulario de editar datos */
+.table .theader{
+    width: 100%;
+    height: 40px;
+    font-size: 18px;
+    font-weight: bolder;
+}
+.table .tbody{
+    width: 100%;
+    height: 93%;
+    display: flex;
+    flex-direction: column;
+    scrollbar-width: thin;
+    scrollbar-color: var(--fuchsia-pink-950) var(--fuchsia-pink-100);
+}
+.table .row{
+    width: 100%;
+    height: 40px;
+    display: flex;
+}
+.table .cell{
+    min-width: 200px;
+    height: 100%;
+    color: var(--text);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+.table .row:nth-child(even) .cell{
+    background: var(--fuchsia-pink-600);
+}
+.theader .cell{
+    background: var(--fuchsia-pink-800);
+}
+.table button{
+    width: 50%;
+    height: 90%;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+}
+.table a{
+    color: var(--text);
+    font-size: 18px;
+    font-weight: bold;
+}
+.table a:hover{
+    opacity: .8;
+    color: var(--fuchsia-pink-800);
+}
+.table img{
+    width: 90%;
+    height: 90%;
+    object-fit: fill;
+}
+@media (max-width:1000px) {
+    .nav{
+        width: 100% !important;
+    }
+    .hamburguesa{
+        top: 1.5% !important;
+    }
+    .configuration .item-configure{
+        left: 0%;
+        top: 51px !important;
+        height: 0px !important;
+        box-shadow: none !important;
+        background: var(--fuchsia-pink-700);
+        transition: all .2s ease-out;
+    }
+    .configuration:hover .item-configure{
+        width: 70%;
+        height: 300px !important;
+        border: 1px solid var(--text);
+        border-top:  none;
+        display: flex !important;
+    }
+}
+@media (max-width:750px) {
+    .configuration .item-configure{
+        width: 100% !important;
+        border: none !important;
+        border-top: 1px solid #fff !important;
+    }
+    .titulo{
+        font-size: 30px !important;
+    }
+    .formulrio{
+        display: flex;
+        flex-direction: column;
+    }
+    .nav-botones{
+        position: relative !important;
+        display: flex;
+        flex-direction: column;
+    }
+    .formulrio input{
+        font-size: 14px !important;
+    }
+    .formulrio label{
+        justify-content: space-between !important;
+        font-size: 14px !important;
+    }
+}

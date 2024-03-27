@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/admin.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Madimi+One&display=swap" rel="stylesheet">
+
+    <title>Administración</title>
+</head>
+<body onload="creadorPantalla()">
+    <main class="main">
+        <a href="#header" id="return" title="Ir arriba">
+            <img src="../img/svg/arrow-up-square-fill.svg" alt="">
+        </a>
+        <header class="header" id="header">
+            <div class="hamburguesa" id="hamburguesa">
+                <button type="button">
+                    <span></span><span></span><span></span>
+                </button>
+            </div>
+            <nav class="nav" id="nav">
+                <ul>
+                    <li>
+                        <a href="#productos">
+                            <img src="../img/svg/bag.svg" alt="Producto">
+                            <span>Producto</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#usuarios">
+                            <img src="../img/svg/bxs-user.svg" alt="Producto">
+                            <span>Usuarios</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#administradores">
+                            <img src="../img/svg/bx-user-check.svg" alt="Producto">
+                            <span>Administradores</span>
+                        </a>
+                    </li>
+                    <hr>
+                    <li id="configuration" class="configuration">
+                        <a href="/site/config.html">
+                            <img src="../img/svg/gear-fill.svg" alt="Producto">
+                            <span>Configuración</span>
+                        </a>
+                       
+                    </li>
+                </ul>
+            </nav>
+        </header>
+        <div class="seccion productos" id="productos">
+            <h1 class="titulo">Datos del producto</h1>
+            <div class="formulrio">
+                <form action="" class="form">
+                    <input type="text" name="nombreProducto" id="nombreProducto" placeholder="Nombre producto">
+                    <input type="email" name="correo" id="correo" placeholder="correo">
+                    <input type="password" name="Password" id="Password" placeholder="Password">
+                    <input type="number" name="precio" id="precio" placeholder="Precio pantalla">
+                    <label for="numeroPantallaH">
+                        Numero de pantallas
+                        <select name="numeroPantalla" id="numeroPantallaH" onchange="creadorPantalla()">
+                            <option value="1" selected>1</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                            <option value="4">4</option>
+                            <option value="5">5</option>
+                        </select>
+                    </label>
+                    <div class="pantallas" id="pantallasH">
+                    </div>
+                    <input type="submit" value="Guardar">
+                </form>
+                <div class="nav-botones">
+                    <form action="" class="busqueda">
+                        <input type="text" name="" id="input-buscar1" placeholder="Buscar un producto" onkeyup="fillterTable('tbody1','input-buscar1')">
+                    </form>
+                </div>
+                <div class="table" >
+                    <div class="theader">
+                        <div class="row">
+                            <div class="cell">ID</div>
+                            <div class="cell">Nombre</div>
+                            <div class="cell">Email</div>
+                            <div class="cell">Contraseña</div>
+                            <div class="cell">Precio</div>
+                            <div class="cell">Eliminar</div>
+                            <div class="cell">Detalles</div>
+                        </div>
+                    </div>
+                    <div class="tbody" id="tbody1">
+                        <div class="row">
+                            <div class="cell">1</div>
+                            <div class="cell">Netflix</div>
+                            <div class="cell">jesus.vacca99@gail.com</div>
+                            <div class="cell">12345</div>
+                            <div class="cell">20000</div>
+                            <div class="cell">
+                                <button type="button">
+                                    <img src="../img/svg/trash.svg" alt="">
+                                </button>
+                            </div>
+                            <div class="cell">
+                                <button type="button" class="ver-producto">
+                                    <img src="../img/svg/pen-fill.svg" alt="">
+                                </button>
+                            </div>
+                            
+                        </div>
+                    </div>
+                </div>
+                <div class="formulario-editar" id="form-pruduct">
+                    <button type="button" id="button-close">
+                        <img src="../img/svg/x-lg.svg" alt="close">
+                    </button>
+                    <form action="" class="form">
+                        <input type="text" name="" id="" placeholder="Nombre">
+                        <input type="text" name="" id="" placeholder="Email">
+                        <input type="text" name="" id="" placeholder="Contraseña">
+                        <input type="text" name="" id="" placeholder="Precio">
+                        <input type="submit" value="Actualizar">
+                    </form>
+                </div>
+            </div>
+
+        </div>
+        <div class="seccion usuarios" id="usuarios">
+            <h1 class="titulo">Datos usuario</h1>
+            <div class="formulrio">
+                <form action="" class="form">
+                    <input type="text" name="nombreUsuario" id="nombreUsuario" placeholder="Nombre completo" required>
+                    <input type="text" name="apelidosUsuario" id="apelidosUsuario" placeholder="Apellidos">
+                    <input type="email" name="correoUsuario" id="correoUsuario" placeholder="correo" required>
+                    <input type="password" name="PasswordUsuario" id="PasswordUsuario" placeholder="Password" required>
+                    <input type="number" name="telefonoUsuario" id="telefonoUsuario" placeholder="Numero de telefono" required>
+                    <input type="number" name="cedulaUsuario" id="cedulaUsuario" placeholder="Numero de cedula" required>
+                    <input type="submit" value="Guardar">
+                </form>
+                <div class="nav-botones">
+                    <form action="" class="busqueda">
+                        <input type="text" name="" id="input-buscar2" placeholder="Buscar un producto" onkeyup="fillterTable('tbody2','input-buscar2')">
+                    </form>
+                </div>
+                <div class="table">
+                    <div class="theader">
+                        <div class="row">
+                            <div class="cell">Cedula</div>
+                            <div class="cell">Nombres</div>
+                            <div class="cell">Apellidos</div>
+                            <div class="cell">Email</div>
+                            <div class="cell">Contraseña</div>
+                            <div class="cell">Telefono</div>
+                            <div class="cell">Eliminar</div>
+                            <div class="cell">Detalles</div>
+                        </div>
+                    </div>
+                    <div class="tbody" id="tbody2">
+                        <div class="row">
+                            <div class="cell">1007899440</div>
+                            <div class="cell">Jesus Rodolfo</div>
+                            <div class="cell">Vacca Romero</div>
+                            <div class="cell">jesus.vacca99@gail.com</div>
+                            <div class="cell">12345</div>
+                            <div class="cell">3117984622</div>
+                            <div class="cell">
+                                <button type="button">
+                                    <img src="../img/svg/trash.svg" alt="">
+                                </button>
+                            </div>
+                            <div class="cell">
+                                <a href="#">Ver detalles</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="formulario-editar">
+                    <form action="" class="form">
+                        <input type="text" name="" id="" placeholder="Nombre">
+                        <input type="text" name="" id="" placeholder="Email">
+                        <input type="text" name="" id="" placeholder="Contraseña">
+                        <input type="text" name="" id="" placeholder="Precio">
+                        <input type="submit" value="Actualizar">
+                    </form>
+                </div>
+            </div>
+        </div>
+        <div class="seccion administradores" id="administradores">
+            <h1 class="titulo">Datos de Administrador</h1>
+            <div class="formulrio">
+                <form action="" class="form">
+                    <input type="text" name="nombreAdmin" id="nombreAdmin" placeholder="Nombre completo" required>
+                    <input type="text" name="apelidosAdmin" id="apelidosAdmin" placeholder="Apellidos">
+                    <input type="email" name="correoAdmin" id="correoAdmin" placeholder="correo" required>
+                    <input type="password" name="PasswordAdmin" id="PasswordAdmin" placeholder="Password" required>
+                    <input type="number" name="telefonoAdmin" id="telefonoAdmin" placeholder="Numero de telefono" required>
+                    <input type="number" name="cedulaAdmin" id="cedulaAdmin" placeholder="Numero de cedula" required>
+                    <input type="submit" value="Guardar">
+                </form>
+                <div class="nav-botones">
+                    <form action="" class="busqueda">
+                        <input type="text" name="" id="input-buscar3" placeholder="Buscar un producto" onkeyup="fillterTable('tbody3','input-buscar3')">
+                    </form>
+                </div>
+                <div class="table" >
+                    <div class="theader">
+                        <div class="row">
+                            <div class="row">
+                                <div class="cell">Cedula</div>
+                                <div class="cell">Nombres</div>
+                                <div class="cell">Apellidos</div>
+                                <div class="cell">Email</div>
+                                <div class="cell">Contraseña</div>
+                                <div class="cell">Telefono</div>
+                                <div class="cell">Eliminar</div>
+                                <div class="cell">Detalles</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="tbody" id="tbody3">
+                        <div class="row">
+                            <div class="cell">1007899440</div>
+                            <div class="cell">Jesus Rodolfo</div>
+                            <div class="cell">Vacca Romero</div>
+                            <div class="cell">jesus.vacca99@gail.com</div>
+                            <div class="cell">12345</div>
+                            <div class="cell">3117984622</div>
+                            <div class="cell">
+                                <button type="button">
+                                    <img src="../img/svg/trash.svg" alt="">
+                                </button>
+                            </div>
+                            <div class="cell">
+                                <a href="#">Ver detalles</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="formulario-editar">
+                    <form action="" class="form">
+                        <input type="text" name="" id="" placeholder="Nombre">
+                        <input type="text" name="" id="" placeholder="Email">
+                        <input type="text" name="" id="" placeholder="Contraseña">
+                        <input type="text" name="" id="" placeholder="Precio">
+                        <input type="submit" value="Actualizar">
+                    </form>
+                </div>
+            </div>
+        </div>
+
+
+    </main>
+    <script src="../js/admin.js"></script>
+</body>
+</html>
